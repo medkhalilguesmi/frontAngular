@@ -1,0 +1,33 @@
+<div  >
+  <h1 style="text-align: center;color: aqua">liste des employés</h1>
+</div>
+<button type="button" class="btn btn-outline-primary" (click)="onAdd()">Add Employé</button>
+
+<table class="table table-striped">
+
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+       <th colspan="2">Action</th>
+
+  </tr>
+
+  <tr *ngFor="let employee of employees; let i=index">
+    <td>{{employee.firstName}}</td>
+    <td>{{employee.lastName}}</td>
+    <td>{{employee.email}}</td>
+    <td>
+      <button class="btn"><i class="fa fa-trash" (click)="delete(employee,i)"></i></button>
+      <button class="btn"><i class="fa fa-edit" (click)="onEdit(employee.id)"></i></button>
+
+    </td>
+
+
+
+
+
+  </tr>
+</table>
+
+

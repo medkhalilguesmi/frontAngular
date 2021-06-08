@@ -1,0 +1,18 @@
+<div *ngIf="employee">
+      <form>
+        <div class="form-group">
+          <input type="text" nbInput fullWidth placeholder="Nom" [(ngModel)]="employee.firstName" name="something" required>
+        </div>
+        <div class="form-group">
+          <input type="text" nbInput fullWidth placeholder="date" [(ngModel)]="employee.lastName" name="something1" required>
+        </div>
+        <div class="form-group">
+          <input type="text" nbInput fullWidth placeholder="cout" [(ngModel)]="employee.email" name="something2" required>
+        </div>
+
+
+
+        <button type="submit" nbButton status="success" (click)="editDemande()">Send</button>
+      </form>
+</div>
+
